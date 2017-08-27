@@ -7,6 +7,12 @@
 
 <text></text>
 <script>
-	requestMedia(video.mediaGenUrl, 'mediaGen', adConfig)
-	requestMedia(video.seamlessUrl, 'seamless')
+	$( document ).ready(function() {
+	    console.log( "ready!" );
+	    requestMedia(video.mediaGenUrl, 'mediaGen', adConfig)
+		requestMedia(video.seamlessUrl, 'seamless')
+	
+	});
+	
+
 </script>
