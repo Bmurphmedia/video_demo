@@ -34,7 +34,7 @@ function createJwPlayer(id, src, adConfig){
 	console.log('making player ' + id)
 	players[id] = jwplayer(id).setup({
 		file: src,
-		// "image": "http://example.com/myImage.png",
+		image: '//mtv.mtvnimages.com/arc/images/shows/teen-mom-2/videos/JenelleSneak808.mp4.00_01_40_05.Still001_Edited.jpg?width=1024&height=576&crop=true',
 		height: 360,
 		width: 640,
 		autostart: false,
@@ -65,11 +65,6 @@ function requestMedia(url, type, adConfig){
 	
 }
 
-
-
-
-
-
 var clip = "mgid:arc:video:mtv.com:f7895ec6-2c0d-4810-8433-6b0ad1b657af"
 var episode = "mgid:arc:episode:mtv.com:c7f34e56-eaa4-11e6-bfd4-0026b9414f30"
 var video = new ViacomVideo(clip)
@@ -77,8 +72,10 @@ var adConfig =  {
       client: 'googima',
       offset: 'pre',
       mute: false,
-      // tag: 'https://pubads.g.doubleclick.net/gampad/ads?sz=640x360&iu=/6062/iab_vast_samples/skippable&ciu_szs=300x250,728x90&impl=s&gdfp_req=1&env=vp&output=xml_vast2&unviewed_position_start=1&url=[referrer_url]&correlator=[timestamp]'
-      tag: 'https://s3.amazonaws.com/mtvnet-seamless/qa-artifacts/403_vast.xml',
+      flashPlayer: '',
+      tag: 'https://pubads.g.doubleclick.net/gampad/ads?sz=640x360&iu=/6062/iab_vast_samples/skippable&ciu_szs=300x250,728x90&impl=s&gdfp_req=1&env=vp&output=xml_vast2&unviewed_position_start=1&url=[referrer_url]&correlator=[timestamp]'
+     // tag: 'https://s3.amazonaws.com/mtvnet-seamless/qa-artifacts/403_vast.xml',
+      // tag: 'https://s3.amazonaws.com/scratch-public/403_vast.xml'
 
     }
 
@@ -87,7 +84,6 @@ var players = {};
 
 
 
-// requestMedia(video.seamlessUrl, 'seamless')
 
 
 
