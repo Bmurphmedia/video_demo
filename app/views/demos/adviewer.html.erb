@@ -8,3 +8,25 @@
 	<option value="3">19864999 - 22380f94e2554b189a8fbc7eadb01e53</option>
 </select>
 <div id="players"></div>
+<script>
+	//pull out renditions array
+	var adRenditions = adStatus["adDatas"];
+
+	// add a new option to array 
+	adOptions[3] = new ad(adMetadata, adRenditions);
+
+	//--------End Data------------------
+
+	// assign selector element to variable
+	var selector; 
+
+	// on change create players
+	selector = document.getElementById("selector")
+	selector.onchange = function(){
+		var value = this.options[this.selectedIndex].value
+		console.log(value);
+		createPlayers(value);
+	};
+
+
+</script>

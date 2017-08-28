@@ -6,6 +6,7 @@ Rails.application.routes.draw do
   root 'welcome#index'
   get '/demos/clientside', to: 'demos#clientside'
   get '/demos/serverside', to: 'demos#serverside'
-   get '/demos/adviewer', to: 'demos#adviewer'
+  get '/demos/adviewer', to: 'demos#adviewer'
+  get '/demos/hybrid', to: 'demos#hybrid'
 
 end

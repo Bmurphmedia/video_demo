@@ -5,7 +5,7 @@ var adOptions = [];
 
 // define an object to hold metadata from ads endpoint and renditoins from submit endpoint
 function ad(metadata, renditions){
-    this.metadata = metadata
+  this.metadata = metadata
   this.renditions = renditions
   
 }
@@ -1364,42 +1364,27 @@ adOptions[3] = new ad(adMetadata, adRenditions);
 
 //--------End Data------------------
 
-// assign selector element to variable
-var selector; 
-
-// on change create players
-$( document ).ready(function() {
-	selector = document.getElementById("selector")
-	selector.onchange = function(){
-		
-		var value = this.options[this.selectedIndex].value
-		console.log(value);
-		createPlayers(value);
-	};
-});
-
-
 function createPlayers(value){
     console.log(value)
         
-//clear the page
-document.getElementById("players").innerHTML="";
+	//clear the page
+	document.getElementById("players").innerHTML="";
 
-//Populate configs, render players for selected ad
+	//Populate configs, render players for selected ad
 
-var selectedAd = adOptions[value];
-console.log(selectedAd)
+	var selectedAd = adOptions[value];
+	console.log(selectedAd)
 
-adMetadata = selectedAd.metadata;
-adRenditions = selectedAd.renditions;
+	adMetadata = selectedAd.metadata;
+	adRenditions = selectedAd.renditions;
 
-function playerConfig(name, src){
-    this.name = name;
-  this.src = src;
+	function playerConfig(name, src){
+	this.name = name;
+	this.src = src;
 }
 
 function renderPlayer(item, index){
-    var players = document.getElementById("players");
+  var players = document.getElementById("players");
   var container = document.createElement("DIV")
   var nameElement = document.createElement("P")
   //var nameText = document.createTextNode(item.name);
