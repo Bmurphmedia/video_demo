@@ -5,7 +5,7 @@
 
 function ViacomVideo(uri){
 	this.uri = uri;
-	this.seamlessUrl = "http://seamless.mtvnservices.com/api/" + uri + "/package.json?proxy=true&SMADfwToS3=true&SMADfwUrl=https://s3.amazonaws.com/mtvnet-seamless/qa-artifacts/403_preroll_vmap.xml&SMSYSdebug=all&SMCRarcPlatforms=7ac7942e-6481-457f-b39a-2b1aedb29f29,b995f21c-e76f-4e58-8d0f-0964dc76efd3,6caa8f01-72e5-4707-abd6-608a0146e2ee,39dfe10c-cc2a-40f9-a20d-962d2604d543,0a16f611-d105-436a-8188-33ea8871171e,f17d0e9b-657a-4785-b3ca-dae9e78563a1";
+	this.seamlessUrl = "http://seamless.mtvnservices.com/api/" + uri + "/package.json?proxy=true&SMADfwToS3=true&SMSTRinnerCap=true&SMADfwUrl=https://s3.amazonaws.com/mtvnet-seamless/qa-artifacts/403_preroll_vmap.xml&SMSYSdebug=all&SMCRarcPlatforms=7ac7942e-6481-457f-b39a-2b1aedb29f29,b995f21c-e76f-4e58-8d0f-0964dc76efd3,6caa8f01-72e5-4707-abd6-608a0146e2ee,39dfe10c-cc2a-40f9-a20d-962d2604d543,0a16f611-d105-436a-8188-33ea8871171e,f17d0e9b-657a-4785-b3ca-dae9e78563a1";
 	this.seamlessPackage;
 	this.mediaGenUrl = "https://media-utils.mtvnservices.com/services/MediaGenerator/" + uri + "?arcPlatforms=7ac7942e-6481-457f-b39a-2b1aedb29f29,b995f21c-e76f-4e58-8d0f-0964dc76efd3,6caa8f01-72e5-4707-abd6-608a0146e2ee,39dfe10c-cc2a-40f9-a20d-962d2604d543,0a16f611-d105-436a-8188-33ea8871171e,f17d0e9b-657a-4785-b3ca-dae9e78563a1&isEpisode=true&format=json&acceptMethods=hls"
 	this.mediaGenPackage;
