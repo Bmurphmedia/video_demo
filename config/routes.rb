@@ -8,5 +8,6 @@ Rails.application.routes.draw do
   get '/demos/serverside', to: 'demos#serverside'
   get '/demos/adviewer', to: 'demos#adviewer'
   get '/demos/hybrid', to: 'demos#hybrid'
+  get '/demos/debug', to: 'demos#debug'
 
 end

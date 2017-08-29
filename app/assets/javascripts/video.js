@@ -52,6 +52,7 @@ function requestMedia(url, type, adConfig){
 	  if (type == "seamless"){
 	  	video.seamlessPackage = new SeamlessPackage(data);
 	  	createJwPlayer("ssai", video.seamlessPackage.src);
+	  	renderJson();
 
 	  }
 	  if (type == "mediaGen"){
@@ -63,6 +64,16 @@ function requestMedia(url, type, adConfig){
 	  
 	})
 	
+}
+
+function renderJson(){
+	if (document.getElementById('debug')){
+		var json = video.seamlessPackage.json
+		// console.log(typeof json)
+		var jsonStr = JSON.stringify(json);
+		document.getElementById('debug').innerHTML = jsonStr;
+	}
+
 }
 
 var clip = "mgid:arc:video:mtv.com:f7895ec6-2c0d-4810-8433-6b0ad1b657af"
